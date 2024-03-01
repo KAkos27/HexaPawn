@@ -37,7 +37,7 @@ button:hover {
   background-color: rgb(49, 49, 49);
 }
 .white {
-  background-color: white;
+  background-color: rgb(196, 196, 196);
 }
 .blackPawn,
 .whitePawn {
@@ -55,6 +55,9 @@ button:hover {
 .whitePawn {
   background-color: white;
   border: none;
+}
+.available {
+  opacity: 10%;
 }
 .invisible {
   display: none;
