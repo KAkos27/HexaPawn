@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+}
+main {
+  background-color: rgb(201, 201, 201);
+  height: 100%;
+}
+button:hover {
+  cursor: pointer;
+}
+.board {
+  border-radius: 30px;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  -webkit-box-shadow: 4px 4px 11px 0px rgba(82, 82, 82, 0.7);
+  -moz-box-shadow: 4px 4px 11px 0px rgba(82, 82, 82, 0.7);
+  box-shadow: 4px 4px 11px 0px rgba(82, 82, 82, 0.7);
+}
+.black,
+.white {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.black {
+  background-color: rgb(49, 49, 49);
+}
+.white {
+  background-color: white;
+}
+.blackPawn,
+.whitePawn {
+  border-radius: 60px;
+  height: 50%;
+  width: 50%;
+  -webkit-box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 1);
+}
+.blackPawn {
+  background-color: black;
+  border: none;
+}
+.whitePawn {
+  background-color: white;
+  border: none;
+}
+.invisible {
+  display: none;
+}
