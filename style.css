@@ -7,8 +7,9 @@ body {
   height: 100vh;
 }
 main {
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(224, 224, 224);
   height: 100%;
+  padding-top: 5%;
 }
 button:hover {
   cursor: pointer;
@@ -37,7 +38,7 @@ button:hover {
   background-color: rgb(49, 49, 49);
 }
 .white {
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(163, 162, 162);
 }
 .blackPawn,
 .whitePawn {
@@ -49,11 +50,11 @@ button:hover {
   box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 1);
 }
 .blackPawn {
-  background-color: black;
+  background-color: rgb(24, 24, 24);
   border: none;
 }
 .whitePawn {
-  background-color: white;
+  background-color: rgb(212, 211, 211);
   border: none;
 }
 .available {
