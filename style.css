@@ -3,17 +3,21 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   height: 100vh;
 }
+
 main {
   background-color: rgb(224, 224, 224);
   height: 100%;
   padding-top: 5%;
 }
+
 button:hover {
   cursor: pointer;
 }
+
 .board {
   border-radius: 30px;
   margin: auto;
@@ -26,6 +30,7 @@ button:hover {
   -moz-box-shadow: 4px 4px 11px 0px rgba(82, 82, 82, 0.7);
   box-shadow: 4px 4px 11px 0px rgba(82, 82, 82, 0.7);
 }
+
 .black,
 .white {
   display: flex;
@@ -34,32 +39,45 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
+
 .black {
   background-color: rgb(49, 49, 49);
 }
+
 .white {
   background-color: rgb(163, 162, 162);
 }
+
 .blackPawn,
-.whitePawn {
+.whitePawn,
+.available {
   border-radius: 60px;
   height: 50%;
   width: 50%;
+}
+
+.blackPawn,
+.whitePawn {
   -webkit-box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 1);
   -moz-box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 1);
   box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 1);
 }
+
 .blackPawn {
   background-color: rgb(24, 24, 24);
   border: none;
 }
-.whitePawn {
+
+.whitePawn,
+.available {
   background-color: rgb(212, 211, 211);
   border: none;
 }
+
 .available {
-  opacity: 10%;
+  opacity: 30%;
 }
+
 .invisible {
   display: none;
 }
