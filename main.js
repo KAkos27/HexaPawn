@@ -1,10 +1,5 @@
 import generateBoard from "./generateBoard.js";
-import clickOnPawnAction from "./clickOnPawnAction.js";
+import game from "./game.js";
 
 generateBoard();
-
-const blackPawns = document.querySelectorAll(".blackPawn");
-const whitePawns = document.querySelectorAll(".whitePawn");
-
-clickOnPawnAction(blackPawns);
-clickOnPawnAction(whitePawns);
+game();

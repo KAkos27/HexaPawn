@@ -8,7 +8,9 @@ const generateBoard = () => {
     if (i < 3 || i > 5) {
       i < 3 ? (buttonClassName = "blackPawn") : (buttonClassName = "whitePawn");
     }
-    board.innerHTML += `<span class=${squareClassName}><button class=${buttonClassName}></button></span>`;
+    board.innerHTML += `<span class='${
+      "square " + squareClassName
+    }' square-id=${i}><button class=${buttonClassName}></button></span>`;
   }
 };
 
