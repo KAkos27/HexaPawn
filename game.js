@@ -1,23 +1,29 @@
-import clickOnPawn from "./clickonpawn.js";
+import checkForAvailable from "./checkForAvailable.js";
+import generateBoard from "./generateBoard.js";
+import giveClassNames from "./giveClassNames.js";
 
 const game = () => {
-  const blackPawns = document.querySelectorAll(".blackPawn");
-  const whitePawns = document.querySelectorAll(".whitePawn");
-
-  clickOnPawn(blackPawns);
-  clickOnPawn(whitePawns);
-
-  const pawnsPos = [
-    blackPawns[0],
-    blackPawns[1],
-    blackPawns[2],
-    ,
-    ,
-    ,
-    whitePawns[0],
-    whitePawns[1],
-    whitePawns[2],
+  const pawnClassNames = [
+    "blackPawn",
+    "blackPawn",
+    "blackPawn",
+    "invisible",
+    "invisible",
+    "invisible",
+    "whitePawn",
+    "whitePawn",
+    "whitePawn",
   ];
+
+  generateBoard();
+  giveClassNames(pawnClassNames);
+
+  const pawns = document.querySelectorAll("button");
+  pawns.forEach((pawn, i) => {
+    pawn.addEventListener("click", () => {
+      checkForAvailable(pawn);
+    });
+  });
 };
 
 export default game;
