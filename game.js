@@ -18,10 +18,23 @@ const game = () => {
   generateBoard();
   giveClassNames(pawnClassNames);
 
+  const blackPawns = document.querySelectorAll(".blackPawn");
+  blackPawns.forEach((element) => {
+    element.disabled = true;
+    element.disabled = false;
+  });
+
   const pawns = document.querySelectorAll("button");
-  pawns.forEach((pawn, i) => {
+  pawns.forEach((pawn) => {
     pawn.addEventListener("click", () => {
-      checkForAvailable(pawn);
+      checkForAvailable(pawn, pawns);
+    });
+  });
+
+  const availables = document.querySelectorAll(".available");
+  availables.forEach((available) => {
+    available.addEventListener("click", () => {
+      clickOnAvailable(availables);
     });
   });
 };

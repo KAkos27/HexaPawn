@@ -5,7 +5,7 @@ const generateBoard = () => {
     i % 2 === 0 ? (squareClassName = "black") : (squareClassName = "white");
     board.innerHTML += `<span class='${
       "square " + squareClassName
-    }' square-id=${i}><button></button></span>`;
+    }'><button data-button-id=${i}></button></span>`;
   }
 };
 
