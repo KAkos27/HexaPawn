@@ -1,4 +1,6 @@
-const checkForAvailable = (element, list) => {
+import clickOnAvailable from "./clickOnAvailable.js";
+
+const checkForAvailable = (element, list, pawnClassNames) => {
   if (element.className != "available") {
     const reClassIndex =
       element.className === "blackPawn"
@@ -12,7 +14,7 @@ const checkForAvailable = (element, list) => {
         });
         invisiblePawn.className = "available";
         invisiblePawn.addEventListener("click", () => {
-          console.log("kutya");
+          clickOnAvailable(pawnClassNames);
         });
       }
     });

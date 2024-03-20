@@ -27,7 +27,7 @@ const game = () => {
   const pawns = document.querySelectorAll("button");
   pawns.forEach((pawn) => {
     pawn.addEventListener("click", () => {
-      checkForAvailable(pawn, pawns);
+      checkForAvailable(pawn, pawns, pawnClassNames);
     });
   });
 };
