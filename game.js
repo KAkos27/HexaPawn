@@ -1,6 +1,6 @@
-import checkForAvailable from "./checkForAvailable.js";
 import generateBoard from "./generateBoard.js";
 import giveClassNames from "./giveClassNames.js";
+import checkForAvailable from "./checkForAvailable.js";
 
 const game = () => {
   const pawnClassNames = [
@@ -28,13 +28,6 @@ const game = () => {
   pawns.forEach((pawn) => {
     pawn.addEventListener("click", () => {
       checkForAvailable(pawn, pawns);
-    });
-  });
-
-  const availables = document.querySelectorAll(".available");
-  availables.forEach((available) => {
-    available.addEventListener("click", () => {
-      clickOnAvailable(availables);
     });
   });
 };
