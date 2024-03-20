@@ -16,6 +16,9 @@ const checkForAvailable = (element, list, pawnClassNames) => {
         invisiblePawn.addEventListener("click", () => {
           clickOnAvailable(pawnClassNames);
         });
+        invisiblePawn.removeEventListener("click", () => {
+          clickOnAvailable(pawnClassNames);
+        });
       }
     });
   }
