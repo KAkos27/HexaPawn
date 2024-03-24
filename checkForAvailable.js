@@ -1,5 +1,3 @@
-import clickOnAvailable from "./clickOnAvailable.js";
-
 const checkForAvailable = (element, list, pawnClassNames) => {
   if (element.className != "available") {
     const reClassIndex =
@@ -10,15 +8,12 @@ const checkForAvailable = (element, list, pawnClassNames) => {
       if (parseInt(invisiblePawn.dataset.buttonId) === reClassIndex) {
         const available = document.querySelectorAll(".available");
         available.forEach((availablePawn) => {
+          availablePawn.removeEventListener("click", () => {
+            clickOnAvailable(pawnClassNames);
+          });
           availablePawn.className = "invisible";
         });
         invisiblePawn.className = "available";
-        invisiblePawn.addEventListener("click", () => {
-          clickOnAvailable(pawnClassNames);
-        });
-        invisiblePawn.removeEventListener("click", () => {
-          clickOnAvailable(pawnClassNames);
-        });
       }
     });
   }

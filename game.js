@@ -1,20 +1,10 @@
 import generateBoard from "./generateBoard.js";
+import pawnClassNames from "./pawnClassNames.js";
 import giveClassNames from "./giveClassNames.js";
 import checkForAvailable from "./checkForAvailable.js";
 
 const game = () => {
-  const pawnClassNames = [
-    "blackPawn",
-    "blackPawn",
-    "blackPawn",
-    "invisible",
-    "invisible",
-    "invisible",
-    "whitePawn",
-    "whitePawn",
-    "whitePawn",
-  ];
-
+  debugger;
   generateBoard();
   giveClassNames(pawnClassNames);
 

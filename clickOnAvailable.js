@@ -1,11 +1,5 @@
-import giveClassNames from "./giveClassNames.js";
-
-const clickOnAvailable = (pawnClassNames) => {
-  console.log("kutya");
-  let temporary = pawnClassNames[4];
-  pawnClassNames[4] = pawnClassNames[7];
-  pawnClassNames[7] = temporary;
-  giveClassNames(pawnClassNames);
+const clickOnAvailable = (event) => {
+  if (event.target.className === "available") {
+    console.log("kutya");
+  }
 };
-
-export default clickOnAvailable;
