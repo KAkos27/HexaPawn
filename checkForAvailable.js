@@ -1,5 +1,5 @@
-const checkForAvailable = (element, list, pawnClassNames) => {
-  if (element.className != "available") {
+const checkForAvailable = (element, list) => {
+  if (element.className !== "available") {
     const reClassIndex =
       element.className === "blackPawn"
         ? parseInt(element.dataset.buttonId) + 3
@@ -8,9 +8,6 @@ const checkForAvailable = (element, list, pawnClassNames) => {
       if (parseInt(invisiblePawn.dataset.buttonId) === reClassIndex) {
         const available = document.querySelectorAll(".available");
         available.forEach((availablePawn) => {
-          availablePawn.removeEventListener("click", () => {
-            clickOnAvailable(pawnClassNames);
-          });
           availablePawn.className = "invisible";
         });
         invisiblePawn.className = "available";

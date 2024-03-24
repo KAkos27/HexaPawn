@@ -1,6 +1,14 @@
+import pawnClassNames from "./pawnClassNames.js";
+import giveClassNames from "./giveClassNames.js";
+
 const clickOnAvailable = (event) => {
-  if (event.target.className === "available") {
-    console.log("kutya");
+  const available = event.target;
+  if (available.className === "available") {
+    const targetIndex = available.dataset.buttonId;
+    let temporary = pawnClassNames[6];
+    pawnClassNames[6] = pawnClassNames[targetIndex];
+    pawnClassNames[targetIndex] = temporary;
+    giveClassNames(pawnClassNames);
   }
 };
 

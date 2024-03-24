@@ -10,6 +10,4 @@ const pawnClassNames = [
   "whitePawn",
 ];
 
-window.pawnClassNames = pawnClassNames;
-
 export default pawnClassNames;
