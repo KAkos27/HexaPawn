@@ -8,7 +8,9 @@ const clickOnAvailable = (event) => {
     let temporary = pawnClassNames[6];
     pawnClassNames[6] = pawnClassNames[targetIndex];
     pawnClassNames[targetIndex] = temporary;
-    giveClassNames(pawnClassNames);
+    setTimeout(() => {
+      giveClassNames(pawnClassNames);
+    }, 1);
   }
 };
 
