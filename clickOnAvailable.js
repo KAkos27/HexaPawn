@@ -3,3 +3,6 @@ const clickOnAvailable = (event) => {
     console.log("kutya");
   }
 };
+
+window.clickOnAvailable = clickOnAvailable;
+export default clickOnAvailable;

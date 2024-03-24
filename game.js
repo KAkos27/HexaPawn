@@ -4,7 +4,6 @@ import giveClassNames from "./giveClassNames.js";
 import checkForAvailable from "./checkForAvailable.js";
 
 const game = () => {
-  debugger;
   generateBoard();
   giveClassNames(pawnClassNames);
 
