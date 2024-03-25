@@ -1,4 +1,6 @@
-const checkForAvailable = (element, list) => {
+let clickedPawnIndex;
+
+const checkForAvailable = (element, list, event) => {
   if (element.className !== "available") {
     const reClassIndex =
       element.className === "blackPawn"
@@ -14,6 +16,7 @@ const checkForAvailable = (element, list) => {
       }
     });
   }
+  clickedPawnIndex = event.target.dataset.buttonId;
 };
 
-export default checkForAvailable;
+export { checkForAvailable, clickedPawnIndex };

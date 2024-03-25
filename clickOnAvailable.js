@@ -1,12 +1,13 @@
 import pawnClassNames from "./pawnClassNames.js";
 import giveClassNames from "./giveClassNames.js";
+import { clickedPawnIndex } from "./checkForAvailable.js";
 
 const clickOnAvailable = (event) => {
   const available = event.target;
   if (available.className === "available") {
     const targetIndex = available.dataset.buttonId;
-    let temporary = pawnClassNames[6];
-    pawnClassNames[6] = pawnClassNames[targetIndex];
+    const temporary = pawnClassNames[clickedPawnIndex];
+    pawnClassNames[clickedPawnIndex] = pawnClassNames[targetIndex];
     pawnClassNames[targetIndex] = temporary;
     setTimeout(() => {
       giveClassNames(pawnClassNames);

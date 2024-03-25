@@ -21,8 +21,8 @@ button:hover {
 .board {
   border-radius: 30px;
   margin: auto;
-  height: 500px;
-  width: 500px;
+  height: 480px;
+  width: 480px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
