@@ -1,7 +1,7 @@
-let clickedPawnIndex;
+let clickedPawn;
 
 const checkForAvailable = (element, list, event) => {
-  if (element.className !== "available") {
+  if (!element.className.includes("available")) {
     const reClassIndex =
       element.className === "blackPawn"
         ? parseInt(element.dataset.buttonId) + 3
@@ -10,13 +10,19 @@ const checkForAvailable = (element, list, event) => {
       if (parseInt(invisiblePawn.dataset.buttonId) === reClassIndex) {
         const available = document.querySelectorAll(".available");
         available.forEach((availablePawn) => {
-          availablePawn.className = "invisible";
+          if (availablePawn.className.includes("Pawn")) {
+            availablePawn.classList.remove("available");
+          } else {
+            availablePawn.classList.remove("available");
+            availablePawn.classList.add("invisible");
+          }
         });
-        invisiblePawn.className = "available";
+        invisiblePawn.classList.remove("invisible");
+        invisiblePawn.classList.add("available");
       }
     });
   }
-  clickedPawnIndex = event.target.dataset.buttonId;
+  clickedPawn = event.target;
 };
 
-export { checkForAvailable, clickedPawnIndex };
+export { checkForAvailable, clickedPawn };
