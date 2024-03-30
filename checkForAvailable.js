@@ -72,9 +72,8 @@ const checkForAvailable = (pawns, pawn, event) => {
       }
       currentPawn.classList.add("available");
     }
+    clickedPawn = event.target;
   }
-
-  clickedPawn = event.target;
 };
 
 export { checkForAvailable, clickedPawn };

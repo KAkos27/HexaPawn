@@ -19,4 +19,3 @@ const clickOnAvailable = (event) => {
 };
 
 window.clickOnAvailable = clickOnAvailable;
-export default clickOnAvailable;
