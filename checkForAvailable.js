@@ -9,6 +9,7 @@ const checkForAvailable = (pawns, pawn, event) => {
     const pawnIsLeft = pawnId % 3 === 0;
     const pawnIsRigth = pawnId % 3 === 2;
     const toMakeAvailable = [];
+
     if (pawnIsLeft) {
       if (pawn.className.includes("black")) {
         if (pawns[pawnId + 3].className.includes("invisible")) {

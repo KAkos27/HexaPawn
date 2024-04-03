@@ -14,7 +14,7 @@ const game = () => {
     element.disabled = false;
   }); */
 
-  const pawns = document.querySelectorAll("button");
+  const pawns = document.querySelector(".board").querySelectorAll("button");
   pawns.forEach((pawn) => {
     pawn.addEventListener("click", (event) => {
       checkForAvailable(pawns, pawn, event);
